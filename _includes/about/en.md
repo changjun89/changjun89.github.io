@@ -5,7 +5,6 @@
 
 저는자바 개발자이고 고수가 되기 위해 계속해서 학습하고 있습니다.
 
-I studied Digital Media Art and graduated from [Communication Un
 
 
 ##### Talks
