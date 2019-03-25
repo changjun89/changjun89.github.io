@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[SpringBoot]SpringApplication"
+title: "[SpringBoot] SpringApplication"
 subtitle: "백기선 스프링부트강좌"
 author: "anpan"
 header-img: "img/post-bg-dreamer.jpg"
