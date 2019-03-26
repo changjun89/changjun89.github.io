@@ -11,7 +11,7 @@ tags:
 
 > [SpringBoot]SpringApplication
 
-https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html#boot-features-spring-application
+<https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html#boot-features-spring-application>
 
 * 기본 로그 레벨 INFO
 * FailureAnalyzer
@@ -22,7 +22,9 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spr
     * Banner 클래스 구현하고 SpringApplication.setBanner()로 설정 가능.
     * 배너 끄는 방법
 * SpringApplicationBuilder로 빌더 패턴 사용 가능
-https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html#boot-features-application-events-and-listeners
+
+    	
+<https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-spring-application.html#boot-features-application-events-and-listeners>
 
 * ApplicationEvent 등록
     * ApplicationContext를 만들기 전에 사용하는 리스너는 @Bean으로 등록할 수 없다.
