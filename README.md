@@ -1,356 +1,169 @@
-# Hux Blog
+# modern-resume-theme [![Gem Version](https://badge.fury.io/rb/modern-resume-theme.svg)](https://badge.fury.io/rb/modern-resume-theme) ![CI workflow](https://github.com/sproogen/modern-resume-theme/workflows/CI%20workflow/badge.svg?branch=master)
 
-### [View Live Hux Blog &rarr;](https://huangxuan.me)
+*A modern simple static resume template and theme. Powered by Jekyll and GitHub pages.*  
+*Host your own resume on GitHub for **free!***
 
-![](http://huangxuan.me/img/blog-desktop.jpg)
+[View Demo](https://sproogen.github.io/modern-resume-theme/)
 
+----
 
+## Announcements
 
-## Boilerplate (beta)
+ - **Nov 2020** - Content configuration version 2 released. Added a new more configurable way of adding data to the resume. Add as many content sections as you like in what ever order you want. Currently just *text* and *list* but future categories coming soon.
+Full backwards compatibilty with version 1 remains and the documentation for version 1 can be found [here (Version 1 Readme)](https://github.com/sproogen/modern-resume-theme/blob/1.x/README.md).
 
-Want to clone a boilerplate instead of my buzz blog? Here comes this!  
+ - **Dec 2019** - Now includes **Dark Mode**
 
+----
+
+![img](screenshot.png)
+
+Thank you for checking out my resume theme / template. If you have any feedback or suggestions for things I can add please let me know by by raising an [issue](https://github.com/sproogen/modern-resume-theme/issues/new/choose), I'm always happy to help.
+
+I always enjoy seeing how people are using my creations and if you would like to say thanks feel free to [buy me a coffee (buymeacoffee.com/vJ6HfLu)](https://buymeacoff.ee/vJ6HfLu).
+
+If you would like to see how I am using this then you can view my resume [here (jameswgrant.co.uk)](http://www.jameswgrant.co.uk/) and find the code [here (sproogen/jameswgrant)](https://github.com/sproogen/jameswgrant), hopefully this might help you.
+
+You can view the project [roadmap here](https://github.com/sproogen/modern-resume-theme/projects/1).
+
+----
+
+## Installation & setup guide
+This template is designed to be hosted using GitHub pages and so that's what these instructions will cover. If you plan on hosting it seperately then there might be some extra steps that we wont cover.
+
+Before starting it might be useful to familiarise yourself with [Jekyll](https://jekyllrb.com/docs/home/), [Markdown](https://www.markdownguide.org/getting-started) and [GitHub pages](https://pages.github.com/).
+
+### Step 1 - GitHub
+Start by creating an account on [GitHub](https://github.com/join)
+
+### Step 2 - Create Repository
+Create a repository on GitHub to hold your files and host your resume. You can find out how to do that [here](https://pages.github.com/)
+
+### Step 3 - Download Resume Template
+Download and extract the following zip into the git repository you have just created. [resume-template.zip](https://github.com/sproogen/modern-resume-theme/archive/gh-pages.zip)
+
+### Step 4 - Push it
+Commit and push the resume template to github
 ```
-$ git clone git@github.com:Huxpro/huxblog-boilerplate.git
+$ git add --all
+$ git commit -m "Initial resume setup"
+$ git push -u origin master
 ```
+### Step 5 - See it
+You should now be able to see the demo resume template using this theme at `[your-username].github.io`
 
-**[View Boilerplate Here &rarr;](http://huangxuan.me/huxblog-boilerplate/)**
+----
 
+## Usage
 
-## Porting 
+So now you will be able to see the demo template at your github URL. You can can edit the yml files and replace the demo content with your own. Hopefully it will be fairly simple to work out where all the content goes, but here is a quick overview.
 
-- [**Hexo**](https://github.com/Kaijun/hexo-theme-huxblog) by @kaijun
-- [**React-SSR**](https://github.com/LucasIcarus/huxpro.github.io/tree/ssr) by @LucasIcarus
+### `_config.yml`
+This will contain all the of the main configuration for your resume such as your name, email, social media links and about me content. It also contains all the content for your resume.  
+A full example of the _config.yml can be found [here](https://github.com/sproogen/modern-resume-theme/blob/master/_config.yml)
 
-## Translation
+#### Content
+The main content for you resume will all come under the content property in the `_config.yml` file. This can be quite complex and a good understanding on [YAML](https://docs.ansible.com/ansible/latest/reference_appendices/YAMLSyntax.html) will be helpful here.
 
- - ![cn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/China.png) **Chinese (Simplified)**: 感谢 [@BrucZhaoR](https://github.com/BruceZhaoR) 的 [中文翻译 &rarr;](https://github.com/Huxpro/huxpro.github.io/blob/master/README.zh.md)
+Content will contain an array of sections, there are currently 2 types of layouts for content sections, text and list.
 
-## Releases
+**text** is a basic layout that contains markdown content.  
+**list** is a the standard layout that is used for things like *Education* and *Experience*.
 
-##### V1.8
-
-- Brand new [Archive](https://huangxuan.me/archive/) page! Which is not just serving as common archive page but also Tag page where all posts are filter-able with tags!
-Thanks [@kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-TeXt-theme) to bring this brilliant idea. Noted that the old Tag page and Archive page are deprecated but the new archive's totally backward compatiable.
-- Re-engineering of the blog by extracting duplicated liquid templates. This was proposed in #74 by @Kaijun but postponed for entirely 2.5 years! I wasn't able to merge his PR directly because of long-time divegence but I'd love to give him the full credit! 
-- New code block! Long-wanted line number are supported out of the box now (thanks for @SmilingParadise's help on Sina Weibo) and the theme was updated to Atom One Dark (checkout FQA for how to change to your farovite theme)
-- MathJax support by @Voleking in #80, but I choose the SVG renderer. See [Mathjax, kramdown and Octopress](https://www.lucypark.kr/blog/2013/02/25/mathjax-kramdown-and-octopress/) for writing and escaping details.
-- Open Graph Protocol support by @Android-KitKat in #253
-- `header-img-credit` and `header-img-credit-href`
-- `nav-style: invert` and `header-style: text`
-
-##### V1.7
-
-- PWA / Service Worker
-
-##### v1.6
-
-- change cdn to cdnjs for better HTTPS support
-
-##### V1.5.2
-
-- Annoyed to delete my blog post after clone or pull? **Boilerplate** comes to help you get started quickly and easily merge update.
-- `-apple-system` is added in font rule, which display beautiful new font **San Francisco** in iOS 9 by default.
-- Fixed [issue#15](https://github.com/Huxpro/huxpro.github.io/issues/15) about code wrap.
-
-##### V1.5.1
-
-- **[Comment](#comment)** support [**Disqus**](http://disqus.com) officially, thanks to @rpsh.
-
-##### V1.5
-
-- **[Comment](#comment)** and **[Analytics](#analytics)** is configurable now! We also add **Google Analytics support** and drop tencents. Both documents is updated.
-
-##### V1.4
-
-- **[Featured Tags](#featured-tags)** is now independent of [SideBar](#sidebar). Both documents is updated.
-- New **[SEO Title](#seo-title)** for SEO usage which is differ from the site title
-
-##### V1.3.1
-
-- Support **PingFang (苹方)**, the new Chinese font presented by [OS X El Capitan](http://www.apple.com/cn/osx/whats-new/)
-
-
-##### V1.3
-
-- Big Improvement to the **Navigation Menu** *(especially in Android)*:  Dropping the old, stuttering, low-performance [Bootstrap collapse.js](http://getbootstrap.com/javascript/#collapse),  replaced with an own wrote, [jank free](http://jankfree.org/) navbar menu in a pretty high-performance implementation of [Google Material Design](https://www.google.com/design/spec/material-design/introduction.html).
-
-<img src="http://huangxuan.me/img/blog-md-navbar.gif" width="320" />
-
-
-##### V1.2
-
-- Brand new **[Keynote Layout](#keynote-layout)** is provided for easily posting beautiful HTML presentations you have created with this blog
-
-
-##### V1.1
-
-- We now support a clean and gorgeous **[SideBar](#sidebar)** for displaying more info
-- **[Friends](#friends)** is also added as a common feature of blog help you do SEO
-
-##### V1.0
-
-- Full-feature **Tag** support
-- **Mobile first** user experience optimization
-- **Typographic optimization** for Chinese Fonts
-- **Network optimizaition** for China, dropping Google webfont, using local CDN
-- Using [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
-- Using Baidu, Tencent/QQ analytics
-- Using [DuoShuo](http://duoshuo.com/) as the Disqus-like third party discussion system
-
-
-## Support
-
-- **Feel free to fork. I'll Appreciate it if you keep the Author & Github link at footer**
-- Give it a **Star** if you like, fork or just clone to use ;)
-- If any problem or requirement, just open an issue here and I will help you.
-
-
-## Document
-
-* Get Started
-	* [Environment](#environment)
-	* [Get Started](#get-started)
-	* [Write Posts](#write-posts)
-* Components
-	* [SideBar](#sidebar)
-	* [Mini About Me](#mini-about-me)
-	* [Featured Tags](#featured-tags)
-	* [Friends](#friends)
-	* [Keynote Layout](#keynote-layout)
-* Comment & Analysis
-	* [Comment](#comment)
-	* [Analytics](#analytics)
-* Advanced
-	* [Customization](#customization)
-	* [Header Image](#header-image)
-	* [SEO Title](#seo-title)
-	* [Page Build Warning](#page-build-warning)
-* FAQ
-
-#### Environment
-
-If you have jekyll installed, simply run `jekyll serve` in Command Line
-and preview the themes in your browser. You can use `jekyll serve --watch` to watch for changes in the source files as well.
-
-
-#### Get Started
-
-You can easily get started by modifying `_config.yml`:
-
+Below is a the full list of content options.
 ```
-# Site settings
-title: Hux Blog             # title of your website
-SEOTitle: Hux Blog			# check out docs for more detail
-description: "Cool Blog"    # ...
+content:
+  - title: Section Name
+    layout: list (options: list, text)
+    content:
+      - layout: left (options: left, right, top, top-right, top-middle)(default: left)
+        title: Name of item (eg. Company or Project name)
+        sub_title: Sub title (eg. Qualification or Job title)(optional)
+        caption: Item caption (eg. Employment or course dates)(optional)
+        link: Web link (eg. https://sproogen.github.io/modern-resume-theme)(optional)
+        link_text: Text for link (optional: without this link will show URL as link text)
+        additional_links: (optional)
+          - title: Link name
+            icon: Font Awesome brand icon name (eg. fab fa-twitter) (https://fontawesome.com/icons?d=gallery&s=brands&m=free)
+            url: Link url (eg. https://google.com)
+        quote: >
+          Short overview or quote for the item
+        description: | # this will include new lines to allow paragraphs
+          Main content area for the list item.
+  - title: Section Name
+    layout: text (options: list, text)
+    content: | # this will include new lines to allow paragraphs
+      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
 
-# SNS settings      
-github_username: huxpro     # modify this account to yours
-weibo_username: huxpro      # the footer woule be auto-updated.
-
-# Build settings
-# paginate: 10              # nums of posts in one page
+      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
 ```
 
-There are more options you can check out in the [Jekyll - Official Site](http://jekyllrb.com/), or you can directly dive into code to find more.
+***Note:** The description or content areas (fields starting with `| #`) use markdown, this means that you have the ability to format the section in many different ways and add things such as images, code & syntax highlighting and tables. You can find a good [Markdown cheatsheet here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)*
 
+#### Additional links
+If you would like to add more than the predefined social links in the config file, then you can use the `additional_links` field to add as many additional links with urls and font awesome icons as you wish.
 
-#### Write Posts
-
-Feel free to checkout Markdown files in the `_posts/`, you will quickly realized how to post your articles with magical markdown plus this nice theme.
-
-The **front-matter** of a post looks like that:
-
+#### Dark Mode
+Dark mode is configured via `_config.yml`  
 ```
----
-layout:     post
-title:      "Hello 2015"
-subtitle:   "Hello World, Hello Blog"
-date:       2015-01-29 12:00:00
-author:     "Hux"
-header-img: "img/post-bg-2015.jpg"
-tags:
-    - Life
----
-
+darkmode: true (options: true, false, never)
 ```
+When dark mode is `true` the site will show the dark theme for everyone  
+When dark mode is `false` the site will not show the dark theme, but it will still respect the users device preferences  
+When dark mode is `never` the site will never be shown in the dark theme
 
-#### SideBar
+### `assets/main.scss`
+Add any css changes or additions you want to make here after the line `@import 'modern-resume-theme';`
 
-![](http://huangxuan.me/img/blog-sidebar.jpg)
+----
 
-Seeing more information may be necessary for you to display, from V1.1, a clean, gorgeous **SideBar** is added for you, which provide more area for displaying possible modules. You can enable *(it is default enable)* this feature by simply config:
+## Running locally
 
-```
-# Sidebar settings
-sidebar: true
-sidebar-about-description: "your description here"
-sidebar-avatar: /img/avatar-hux.jpg     # use absolute URL.
-```
+Before you start make sure you have *Ruby* and the gems for *Jekyll* installed locally. You can find out how to do that [here](https://jekyllrb.com/docs/installation/).
 
-We default support *[Featured Tags](#featured-tags)*, *[Mini About Me](#mini-about-me)* and *[Friends](#friends)* these three modules and you can add your own. The sidebar is naturally responsive and would be push to bottom in a small screen size (`<= 992px`, according to [Bootstarp Grid System](http://getbootstrap.com/css/#grid))  
-More details of these three separate modules are talking below.
+1. Clone your resume repository locally *(if you haven't already)*
+2. `cd [your-repository-name]`
+3. `bundle install`
+4. `bundle exec jekyll serve`
+5. Open your browser to `http://localhost:4000`
 
-#### Mini About Me
+Any changes you make will automatically build and you will be able to see these by refreshing your browser.
 
-Mini-About-Me module display all your SNS buttons also your avatar and the description if you set `sidebar-avatar` and `sidebar-about-description` which is very useful and common for a sidebar so it is default with your sidebar.
+*Note: You will need to re-run `bundle exec jekyll serve` to see changes made in `_config.yml`.*
 
-It is really nice-looking and well-designed. It would be hidden in a small screen seeing the sidebar would be push to bottom and there is already a footer including SNS feature which is similar.
+----
 
-#### Featured Tags
+## Contributing
 
-Considering the Featured-Tags feature in [Medium](http://medium.com) is pretty cool, so I add it in my blog theme also.   
-This module is independent of sidebar from V1.4, so it can definitely live without enable sidebar, which would be displayed in the bottom when `sidebar` set to false, and it is not only displayed in home page but also every post page bottom.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sproogen/modern-resume-theme. You can view our full guide to contributing [here](https://github.com/sproogen/modern-resume-theme/blob/master/CONTRIBUTING.md)
+This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
+----
 
-```
-# Featured Tags
-featured-tags: true  
-featured-condition-size: 1     # A tag will be featured if the size of it is more than this condition value
-```
+## Development
 
-The only one thing need to be paid attention to is the `featured-condition-size`: A tag will be featured if the size of it is more than this condition value.  
-Internally, a condition template `{% if tag[1].size > {{site.featured-condition-size}} %}` is used to do the filter.
+### Locally
 
-#### Friends
+Before you start make sure you have *Ruby* and the gems for *Jekyll* installed locally. You can find out how to do that [here](https://jekyllrb.com/docs/installation/).
 
-Friends is a very common feature of a blog seeing the SEO, so I add it in V1.1 release to help that.   
-Friends can also live without enable sidebar, also be displayed in the bottom when sidebar unable, and be displayed in every post page bottom.
+*Note: You will need version `1.15.2` of bundler, as this is the only version that Heroku supports.*
 
+1. Fork and or clone this repository locally
+2. `cd modern-resume-theme`
+3. `bundle install`
+4. `bundle exec jekyll serve`
+5. Open your browser to `http://localhost:4000`
 
-You can just add your friends information in `_config.yml` with a familiar JSON syntax and everything is done, very easy:
+Any changes you make will automatically build and you will be able to see these by refreshing your browser. To find out more about *Jekyll* take a look [here](https://jekyllrb.com/docs/usage/).
 
-```
-# Friends
-friends: [
-    {
-        title: "Foo Blog",
-        href: "http://foo.github.io/"
-    },
-    {
-        title: "Bar Blog",
-        href: "http://bar.github.io"
-    }
-]
-```
+***Note:** You will need to re-run `bundle exec jekyll serve` to see changes made in `_config.yml`.*
 
+### Docker
 
-#### Keynote Layout
+If you have docker installed you can simply run `docker-compose up` to launch the site in a container, it will then be hosted at `http://localhost:4000`
 
-![](http://huangxuan.me/img/blog-keynote.jpg)
-
-There is a increasing tendency to use Open Web technology to create keynotes, presentations, like Reveal.js, Impress.js, Slides, Prezi etc. I consider a modern blog should have abilities to post these HTML based presentation easily also abilities to play it directly.
-
-Under the hood, a `iframe` is used to include webpage from outer source, so the only things left is to give a url in the **front-matter**:
-
-```
----
-layout:     keynote
-iframe:     "http://huangxuan.me/js-module-7day/"
----
-```
-
-The iframe will be automatically resized to adapt different form factors also the device orientation. A padding is left to imply user that there has more content below, also to ensure that there is a area for user to scroll down in mobile device seeing most of the keynote framework prevent the browser default scroll behavior.
-
-
-#### Comment
-
-This theme support both [Disqus](http://disqus.com) and [Duoshuo](http://duoshuo.com) as the third party discussion system.
-
-First, you need to sign up and get your own account. **Repeat, DO NOT use mine!** (I have set Trusted Domains) It is deathly simple to sign up and you will get the full power of management system. Please give it a try!
-
-Second, from V1.5, you can easily complete your comment configuration by just adding your **short name** into `_config.yml`:
-
-```
-duoshuo_username: _your_duoshuo_short_name_
-# OR
-disqus_username: _your_disqus_short_name_
-```
-
-**To the old version user**, it's better that you pull the new version, otherwise you have to replace code in `post.html`, `keynote.html` and `about.html` by yourselves.
-
-Furthermore, Duoshuo support Sharing. if you only wanna use Duoshuo comment without sharing, you can set `duoshuo_share: false`. You can use Duoshuo Sharing and Disqus Comments together also.
-
-
-
-#### Analytics
-
-From V1.5, we support Google Analytics and Baidu Tongji officially with a deathly simple config:
-
-```
-# Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
-
-# Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
-```
-
-Just checkout the code offered by Google/Baidu, and copy paste here, all the rest is already done for you.
-
-(Google might ask for meta tag "google-site-verification")
-
-
-#### Customization
-
-If you wanna do more customization and change code yourself, a [Grunt](gruntjs.com) environment is also included. (Thanks to Clean Blog.)
-
-There are a number of tasks it performs like minification of the JavaScript, compiling of the LESS files, adding banners to keep the Apache 2.0 license intact, and watching for changes. Run the grunt default task by entering `grunt ` into your command line which will build the files. You can use `grunt watch` if you are working on the JavaScript or the LESS.
-
-**Try to understand code in `_include/` and `_layouts/`, then you can modify Jekyll [Liquid](https://github.com/Shopify/liquid/wiki) template directly to do more creative customization.**
-
-
-#### Header Image
-
-Change header images of any pages or any posts is pretty easy as mentioned above. But, thanks to [issue #6 (in Chinese)](https://github.com/Huxpro/huxpro.github.io/issues/6) asked, **how to make it looks great?**
-
-**Well...it is actually a design issue**, not a coding stuff. It is better that you have basic design knowledge, but not is ok, let me told you how to make it well-designed:
-
-Seeing the title text above image is **white**, the image should be **dark** to emphasize the contract. so we can easily add a **black overlay with fews of opacity**, which is depends on the brightness of the original images you used. you can process it in Photoshop, Sketch etc.
-
-In technical views, it can be done with CSS. However, the opacity of the black overlay is really hard to assigned, **every image has different brightness so the  degree it should be adjusted is different so it is impossible to hard code it.**
-
-
-#### SEO Title
-
-Before V1.4, site setting `title` is not only used for displayed in Home Page and Navbar, but also used to generate the `<title>` in HTML.
-It's possible that you want the two things different. For me, my site-title is **“Hux Blog”** but I want the title shows in search engine is **“黄玄的博客 | Hux Blog”** which is multi-language.
-
-So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` different from `title`, and it would be only used to generate HTML `<title>` and setting DuoShuo Sharing.
-
-#### Page Build Warning
-
-There are many possible reasons to cause a "Page Build Warning" email or similar error.
-
-One of these is that github changes its build environment.
-
-> You are attempting to use the 'pygments' highlighter, which is currently unsupported on GitHub Pages. Your site will use 'rouge' for highlighting instead. To suppress this warning, change the 'highlighter' value to 'rouge' in your '_config.yml'.
-
-So, just edit `_config.yml`, find `highlighter: pygments`, change it to `highlighter: rouge` and the warning will be gone.
-
-For other circumstances, check out existing issues or create a new one!
-
-## FAQ
-
-#### How can I customize the theme of code block?
-
-This theme uses the default code syntax highlighter of jekyll, "rouge, which is compatible with Pygments theme so just pick any pygments theme css (e.g. from [here](http://jwarby.github.io/jekyll-pygments-themes/languages/javascript.html) and replace the content of `highlight.less`.
-
-#### cannot load such file -- jekyll-paginate
-
-Executing this command to install this plugin:
-
-```
-$ gem install jekyll-paginate 
-```
-
-This blog started in Jekyll 2 time when `jekyll-paginate` is standard. With Jekyll 3, it's a plugin we included in `_config.yml`.
-
+----
 
 ## License
 
-Apache License 2.0.
-Copyright (c) 2015-2016 Huxpro
-
-Hux Blog is derived from [Clean Blog Jekyll Theme (MIT License)](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll/)
-Copyright (c) 2013-2016 Blackrock Digital LLC.
+The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
