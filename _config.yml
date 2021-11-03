@@ -17,19 +17,19 @@ phone: 010-4576-9751
 darkmode: false
 
 # Social links
-twitter_username: jekyllrb
-github_username:  jekyll
-stackoverflow_username: "00000001"
-dribbble_username: jekyll
-facebook_username: jekyll
-flickr_username: jekyll
-instagram_username: jekyll
-linkedin_username: jekyll
-xing_username: jekyll
-pinterest_username: jekyll
-youtube_username: jekyll
-googleplus_username: +jekyll
-orcid_username: 0000-0000-0000-0000
+#twitter_username: jekyllrb
+#github_username:  jekyll
+#stackoverflow_username: "00000001"
+#dribbble_username: jekyll
+#facebook_username: jekyll
+#flickr_username: jekyll
+#instagram_username: jekyll
+#linkedin_username: jekyll
+#xing_username: jekyll
+#pinterest_username: jekyll
+#youtube_username: jekyll
+#googleplus_username: +jekyll
+#orcid_username: 0000-0000-0000-0000
 
 # Additional icon links
 additional_links:
@@ -55,54 +55,156 @@ about_content: | # this will include new lines to allow paragraphs
    저는 객체지향적인 코드, clean 코드를 위해 항상 노력하고있습니다. 또한 TDD를 항상 지향하고 있으며, 테스트코드를 기반으로한 regacy 코드에 대해서 꾸준히 리팩토링을 하고 개선하는 것을 좋아합니다.
    또한 개발자는 새로운 기술에 대해 열려 있어야 한다고 생각합니다. 능동적으로 기술에 대해 알아보고 학습하고 이것을 전파하는 개발자가 되도록 항상 노력하고 있습니다.
 
-
 content:
+  - title: skill
+    layout: list
+    content:
+      - layout: left
+        title: Backend
+        description: | # this will include new lines to allow paragraphs
+          * Java, Kotlin
+          * Spring Boot, Spring MVC, Spring Batch, Spring Security, Spring Data JPA/Redis, Spring Cloud Openfeign
+          * JPA, Querydsl, Hibernate
+          * Junit5, Mockito
+          * Gradle
+          * IntelliJ
+      - layout: left
+        title: DevOps
+        description: | # this will include new lines to allow paragraphs
+          * MySQL, Oracle
+          * Elastic Cache (Redis)
+          * EKS(kubernetes), docker
+          * newrellic, kibana, grafana, Pinpoint, Ngrinder
+          * Tomcat
+
   - title: Projects # Title for the section
     layout: list # Type of content section (list/text)
     content:
       - layout: left
-        title: Project name
-        link: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        link_text: Link Text
-        additional_links:
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-          - title:  Github page for project (eg. sproogen/modern-resume-theme)
-            icon: fab fa-github
-            url: Link to project (eg. sproogen.github.io/modern-resume-theme)(optional)
-        quote: >
-          Short overview of the project (optional)
+        title: 거래소 특금법 대응을 위한 KYC 프로세스 대응
+        sub_title: 코인원
         description: | # this will include new lines to allow paragraphs
-          Description about the work on/with the project
+          * 배경 : 가상화폐 거래소의 특금법 대응을 위한 KYC 프로세스 개발
+          * 역할 : Backend 개발 리딩, 1원계좌 연동, aml솔루션 연동, 핸드폰인증 개발
+          * 기술스택 : kotlin, springboot, redis, mysql, spring-cloud-starter-openfeign, jpa
+
+          * kyc 에 필요한 db 테이블 설계
+          * kyc 인증들을 처리할 account-api 서버 구축
+          * 1원 계좌 인증 연동 (settle bank)
+          * aml 솔루션 연동
+          * kmc 핸드폰 인증 연동
+          * 기존 web , app, admin 서버들과의 연동
+
+      - layout: left
+        title: 안면인식을 이용한 본인 인식 프로젝트
+        sub_title: 코인원
+        description: | # this will include new lines to allow paragraphs
+          * 배경 : 영상통화 상담사 인력이 커버할 수 있는 요청 건수의 한도가 폭증(하루 10,000건 육박)하여 상담사 수동 처리로 커버할 수 없는 상황. 운영 리소스의 비용절감 및 고객 클레임 완화를 위해 반수동 인증과정을 자동화 하고자 함.고객의 인증 편의성 증대와 운영리소스 비용 절감 https://www.coindeskkorea.com/news/articleView.html?idxno=73815
+          * 기술스택 : kotlin, springboot, redis, mysql, spring-cloud-starter-openfeign
+          * 안면인식 솔루션 (selphid) 의 module을 제공받아, 그것을 감싸는 api 서버 개발
+
+      - layout: left
+        title: 카카오 알림톡 연동
+        sub_title: 코인원
+        description: | # this will include new lines to allow paragraphs
+          * 배경 : ID/Password만으로 로그인이 가능한 2단계 인증자의 정보를 탈취하여 로그인 한 뒤 자산을 빼돌리는 문제 해결
+            보안 레벨을 높여 사용자의 해킹사고를 방지하거나 빠르게 인지하도록 알린다.
+          * 카카오 알림톡을 제공하는 api 서버 구축
+          * 로그인 , 입출금시 카카오 알림 전송
+          * 알림톡 장애시 sms 전송 하는 fallback 구현
+
+      - layout: left
+        title: 2factor 인증 카카오페이인증 추가 프로젝트
+        sub_title: 코인원
+        description: | # this will include new lines to allow paragraphs
+          * 배경 : 기존 2FA(OTP인증) 사용성 개선 및 솔루션 도입
+          * 피싱 사이트를 통한 OTP 탈취 해결
+
+          * 기술스택 : kotlin, springboot, redis, mysql, jpa, spring-cloud-starter-openfeign
+
+          * 카카오페이서버로 인증을 요청하는  카카오인증서버(kakao-auth-api) 구축
+          * 2FA등록/해지, 입/출금 등 2FA인증이 필요한 부분들에 적용
+
+      - layout: left
+        title: 개인정보 암호화드
+        sub_title: 뱅크샐러
+        description: | # this will include new lines to allow paragraphs
+          * 배경 : 개인정보 보호 및 법률 준수를 위한 개인정보 및 금융정보 암호화 진행
+          * 기술스택 :  golang, mysql, aws KMS(key management service) , aes256, hmac
+          * golang 암호화 모듈 개발
+          * 개인정보 조회 및 저장 api에 암호화 모듈 적용
+          * msa형태를 위한 db의존성 api로 변경
+
+      - layout: left
+        title: 개인정보 암호화
+        sub_title: 뱅크샐러드
+        description: | # this will include new lines to allow paragraphs
+          * 배경 : 기존 솔루션의 서버쪽 크게 3가지의 문제를 해결하기 위해 서버를 다시 개발하기로 결정하였다.
+            + 첫번째 문제 :  무결성 검증 과정에서 클라이언트는 문서대로 제대로 구현되어있지만 서버에서 NPE등의 알수없는 오류를 발생시킴
+            + 두번째 문제 : api endpoint가 하나만 존재하고 post body의 내용에 따라 분기가 되고있기때문에 어느 부분에서 문제가 생겼는지 트래킹이 쉽지 않음
+            + 세번째 문제 :  자바세션을 사용하기 때문에 스케일아웃되기 좋은 구조가 아니다.
+          * 기술스택 :  golang, grpc , redis, mysql
+          * api endpoint 분리
+          * 자바세션 -> redis
+          * featureFlag를 통한 점진적 배포
+
+      - layout: left
+        title: 투자전략 서비스 개발
+        sub_title: 팍스넷
+        description: | # this will include new lines to allow paragraphs
+          * 증권전문가들의 투자전략을 작성 및 공유하는 커뮤니티와 전문가들의 수익률을 계산하여 순위를 하는 플랫폼 커뮤니티 서비스를 맡아서 개발
+          * 상대적으로 노출이 많이 되는 인트로 화면의 데이터들은 3분에 한 번씩 배치를 통해서 미리 Ehcache에 적재해서 서비스에 대한 부하 감소
+          * 5분에 한 번씩 batch 프로그램을 통해 각 종목들의 종목 API를 호출해 현재가를 얻어와 수익률 계산 및 랭킹 제공
+          * 일별, 주별, 월별 랭킹 통계 데이터 제공
+
+      - layout: left
+        title: Money10 서비스 개발
+        sub_title: 팍스넷
+        description: | # this will include new lines to allow paragraphs
+          * 오전 10시, 유료 회원에게만 먼저 제공되는 유료 투자정보 서비스 개발
+          * 유료회원에게만 정보를 먼저 제공하기 위해 빌링시스템과 연동하여 유료회원을 파악 후 정상적으로 정보를 제공 유료 회원이 아닌 경우에는 마스킹 처리를 하여 정보 확인 불가
+          * 정보제공자가 원하는 시간에는 모든 사용자가 정보를 확인할 수 있도록 예약시간 설정 기능 추가
+          * 정보제공자를 관리하는 백오피스 개발
+
+      - layout: left
+        title: 팍스넷 app개편 관련 대응 API개발
+        sub_title: 팍스넷
+        description: | # this will include new lines to allow paragraphs
+          * 팍스넷 앱 개편에 따른 API 대응 개발
+          * 신규 API 개발
+          * 기존 API 테스트 코드 추가 및 리팩토링
+
+      - layout: left
+        title: 팍스넷 app개편 관련 대응 API개발
+        sub_title: 팍스넷
+        description: | # this will include new lines to allow paragraphs
+          * 2분 동안 사이트에서 검색된 종목검색 순위 정보 개발
+          * redis를 사용하여 2분 동안의 검색된 종목을 쌓은 후 정보 계산
+          * 2분이 지난 후에는 RDB에 순위 정보 저장 후 redis상에서 해당 정보들 삭제
+          * 관리자를 위한 검색 통계 데이터 제공
+
   - title: Experience
     layout: list
     content:
-      - layout: right
+      - layout: left
         title: 코인원
-        sub_title: 백엔드개발
+        sub_title: 가상화폐 거래소 (https://coinone.co.kr/)
         caption: 2020-11-02 ~ 현재 재직중
-        quote: >
-          가상화폐 거래소 (https://coinone.co.kr/)
         description: | # this will include new lines to allow paragraphs
           가상화폐거래소 백엔드 개발
-      - layout: right
-        title: 뱅크샐러
-        sub_title: 백엔드개발
+      - layout: left
+        title: 뱅크샐러드
+        sub_title: 자산관리 플랫폼(https://www.banksalad.com/)
         caption: 2020-01-15 ~ 2020-10-31
-        quote: >
-          자산관리 플랫폼
         description: | # this will include new lines to allow paragraphs
           자산관리 플랫폼 서버 개발
-      - layout: right
+      - layout: left
         title: 팍스넷
-        sub_title: 포탈서비스 개
+        sub_title: 증권포탈(https://www.paxnet.co.kr/)
         caption: 2018-11 ~ 2019-12
-        quote: >
-          증권포탈
         description: | # this will include new lines to allow paragraphs
           증권 포탈 개발 서비스개발
-      - layout: right
+      - layout: left
         title: 지티원
         sub_title: AML 솔루션 개발
         caption: 2014-02 ~ 2018-10
@@ -110,32 +212,40 @@ content:
           AML 솔루션
         description: | # this will include new lines to allow paragraphs
           AML 솔루션 개발
- - title: Education
+  - title: Education
     layout: list
     content:
-      - layout: top-right
+      - layout: top-left
         title: nextStep java TDD 교육
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
+        caption: 2019-05 ~ 2019-06
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
-      - layout: top-right
-        title: nextStep jwp 웹 프로그래밍
-        sub_title: Qualifications (eg. BA Performing Arts)
-        caption: Date Range (eg. 2016 - 2019)
-        quote: >
-          Short institution or course description (optional)
+          테스트 코드와 클린 코드 교육
+      - layout: top-left
+        title: nextStep JWP - 라이브러리 & 프레임워크
+        caption: 2019-09 ~ 2019-11
         description: | # this will include new lines to allow paragraphs
-          Description of qualification
-  - title: A Little More About Me
-    layout: text
-    content: | # this will include new lines to allow paragraphs
-      This is where you can write a little more about yourself. You could title this section **Interests** and include some of your other interests.
+          테스트코드와 함께 WAS를 직접 구현해 보면서 그 원리를 이해
 
-      Or you could title it **Skills** and write a bit more about things that make you more desirable, like *leadership* or *teamwork*
-
+  - title: skill
+    layout: list
+    content:
+      - layout: left
+        title: Backend
+        description: | # this will include new lines to allow paragraphs
+          * Java, Kotlin
+          * Spring Boot, Spring MVC, Spring Batch, Spring Security, Spring Data JPA/Redis, Spring Cloud Openfeign
+          * JPA, Querydsl, Hibernate
+          * Junit5, Mockito
+          * Gradle
+          * IntelliJ
+      - layout: left
+        title: DevOps
+        description: | # this will include new lines to allow paragraphs
+          * MySQL, Oracle
+          * Elastic Cache (Redis)
+          * EKS(kubernetes), docker
+          * newrellic, kibana, grafana, Pinpoint, Ngrinder
+          * Tomcat
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)
