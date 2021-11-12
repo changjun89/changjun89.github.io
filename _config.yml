@@ -225,27 +225,6 @@ content:
         caption: 2019-09 ~ 2019-11
         description: | # this will include new lines to allow paragraphs
           테스트코드와 함께 WAS를 직접 구현해 보면서 그 원리를 이해
-
-  - title: skill
-    layout: list
-    content:
-      - layout: left
-        title: Backend
-        description: | # this will include new lines to allow paragraphs
-          * Java, Kotlin
-          * Spring Boot, Spring MVC, Spring Batch, Spring Security, Spring Data JPA/Redis, Spring Cloud Openfeign
-          * JPA, Querydsl, Hibernate
-          * Junit5, Mockito
-          * Gradle
-          * IntelliJ
-      - layout: left
-        title: DevOps
-        description: | # this will include new lines to allow paragraphs
-          * MySQL, Oracle
-          * Elastic Cache (Redis)
-          * EKS(kubernetes), docker
-          * newrellic, kibana, grafana, Pinpoint, Ngrinder
-          * Tomcat
 # Footer
 footer_show_references: true
 # references_title: References on request (Override references text)
