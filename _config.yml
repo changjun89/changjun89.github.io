@@ -126,8 +126,8 @@ content:
           * 2FA등록/해지, 입/출금 등 2FA인증이 필요한 부분들에 적용
 
       - layout: left
-        title: 개인정보 암호화드
-        sub_title: 뱅크샐러
+        title: 개인정보 암호화
+        sub_title: 뱅크샐러드
         description: | # this will include new lines to allow paragraphs
           * 배경 : 개인정보 보호 및 법률 준수를 위한 개인정보 및 금융정보 암호화 진행
           * 기술스택 :  golang, mysql, aws KMS(key management service) , aes256, hmac
